@@ -4,19 +4,19 @@ public abstract class Vehicle {
 
 	public abstract int calcBill();
 
+	private final int id;
+
 	private String make;
 
 	private String model;
 
 	private String colour;
 
-	private int id;
-
-	private static int count = 1;
+	private static int count;
 
 	public Vehicle(String make, String model, String colour) {
 		super();
-		this.id = count++;
+		this.id = ++count;
 		this.make = make;
 		this.model = model;
 		this.colour = colour;
@@ -61,13 +61,9 @@ public abstract class Vehicle {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = count++;
-	}
-
 	@Override
 	public String toString() {
-		return "Vehicle [make=" + make + ", model=" + model + ", colour=" + colour + ", id=" + id + "]";
+		return "Vehicle [id=" + id + ", make=" + make + ", model=" + model + ", colour=" + colour + "]";
 	}
 
 }
