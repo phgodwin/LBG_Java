@@ -1,6 +1,6 @@
 package garage;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Comparable<Vehicle> {
 
 	public abstract int calcBill();
 
@@ -65,5 +65,17 @@ public abstract class Vehicle {
 	public String toString() {
 		return "Vehicle [id=" + id + ", make=" + make + ", model=" + model + ", colour=" + colour + "]";
 	}
+
+	@Override
+	public int compareTo(Vehicle o) {
+		return this.make.compareTo(o.make);
+	}
+
+//	compare by id
+//	@Override
+//	public int compareTo(Vehicle o) {
+//
+//		return o.id - id;
+//	}
 
 }

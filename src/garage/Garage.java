@@ -34,5 +34,6 @@ public class Garage {
 
 		}
 		System.out.println("Total Bill: " + sum);
+
 	}
 }
