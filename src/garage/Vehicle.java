@@ -1,12 +1,37 @@
 package garage;
 
-public class Vehicle {
+public abstract class Vehicle {
+
+	public abstract int calcBill();
+
+	@Override
+	public String toString() {
+		return "Vehicle [make=" + make + ", model=" + model + ", colour=" + colour + ", toString()=" + super.toString()
+				+ "]";
+	}
 
 	private String make;
 
 	private String model;
 
 	private String colour;
+
+	public Vehicle(String make, String model, String colour) {
+		super();
+		this.make = make;
+		this.model = model;
+		this.colour = colour;
+	}
+
+	public void print() {
+		System.out.println("Make: " + this.make);
+		System.out.println("Model: " + this.model);
+		System.out.println("Colour: " + this.colour);
+	}
+
+	public Vehicle() {
+		super();
+	}
 
 	public String getMake() {
 		return make;

@@ -2,6 +2,28 @@ package garage;
 
 public class Car extends Vehicle {
 
+	@Override
+	public int calcBill() {
+
+		return 50;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [boot=" + boot + ", isBoot()=" + isBoot() + ", getMake()=" + getMake() + ", getModel()="
+				+ getModel() + ", getColour()=" + getColour() + "]";
+	}
+
+	public Car(String make, String model, String colour, boolean boot) {
+		super(make, model, colour);
+		this.boot = boot;
+
+	}
+
+	public Car() {
+		super();
+	}
+
 	private boolean boot;
 
 	public boolean isBoot() {
@@ -12,11 +34,10 @@ public class Car extends Vehicle {
 		this.boot = boot;
 	}
 
-	public void printCar() {
+	@Override
+	public void print() {
 
-		System.out.println("Make: " + getMake());
-		System.out.println("Model: " + getModel());
-		System.out.println("Colour: " + getColour());
+		super.print();
 		System.out.println("Has boot: " + isBoot());
 
 	};

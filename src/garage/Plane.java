@@ -2,21 +2,41 @@ package garage;
 
 public class Plane extends Vehicle {
 
-	private String WingSize;
+	@Override
+	public int calcBill() {
+		return (getWingSize() * 2);
+	}
 
-	public String getWingSize() {
+	@Override
+	public String toString() {
+		return "Plane [WingSize=" + WingSize + ", getWingSize()=" + getWingSize() + ", getMake()=" + getMake()
+				+ ", getModel()=" + getModel() + ", getColour()=" + getColour() + "]";
+	}
+
+	public Plane() {
+		super();
+	}
+
+	public Plane(String make, String model, String colour, int wingSize) {
+		super(make, model, colour);
+		this.WingSize = wingSize;
+
+	}
+
+	private int WingSize;
+
+	public int getWingSize() {
 		return WingSize;
 	}
 
-	public void setWingsSize(String wingsSize) {
+	public void setWingsSize(int wingsSize) {
 		WingSize = wingsSize;
 	}
 
-	public void printPlane() {
+	@Override
+	public void print() {
 
-		System.out.println("Make: " + getMake());
-		System.out.println("Model: " + getModel());
-		System.out.println("Colour: " + getColour());
+		super.print();
 		System.out.println("Wing size: " + getWingSize());
 
 	}

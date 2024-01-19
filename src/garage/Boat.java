@@ -2,6 +2,27 @@ package garage;
 
 public class Boat extends Vehicle {
 
+	@Override
+	public int calcBill() {
+
+		return 150;
+	}
+
+	@Override
+	public String toString() {
+		return "Boat [onWater=" + onWater + ", isOnWater()=" + isOnWater() + ", getMake()=" + getMake()
+				+ ", getModel()=" + getModel() + ", getColour()=" + getColour() + "]";
+	}
+
+	public Boat() {
+		super();
+	}
+
+	public Boat(String make, String model, String colour, boolean onWater) {
+		super(make, model, colour);
+		this.onWater = onWater;
+	}
+
 	private boolean onWater;
 
 	public boolean isOnWater() {
@@ -12,11 +33,10 @@ public class Boat extends Vehicle {
 		this.onWater = onWater;
 	}
 
-	public void printBoat() {
+	@Override
+	public void print() {
 
-		System.out.println("Make: " + getMake());
-		System.out.println("Model: " + getModel());
-		System.out.println("Colour: " + getColour());
+		super.print();
 		System.out.println("On water: " + isOnWater());
 
 	}

@@ -4,10 +4,32 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Vehicle myCar = new Vehicle();
-		myCar.setMake("Ford");
-		myCar.setModel("Fiesta");
-		myCar.setColour("Red");
+		Car dreamcar = new Car("Audi", "R8", "black", true);
+//		dreamcar.print();
+
+		Car brokencar = new Car();
+//		brokencar.print();
+
+		Boat bestboat = new Boat("Sunseeker", "24PX", "Silver", true);
+//		bestboat.print();
+
+		Boat brokenboat = new Boat();
+//		brokenboat.print();
+
+		Plane bestplane = new Plane("Boeing", "787", "White", 200);
+//		bestplane.print();
+
+		Plane brokenplane = new Plane();
+//		brokenplane.print();
+
+//		put into an array 
+
+		Vehicle[] vehicles = { dreamcar, bestboat, bestplane };
+
+		for (Vehicle vehicle : vehicles) {
+
+//			vehicle.print();
+		}
 
 		Car mumsCar = new Car();
 		mumsCar.setMake("Nissan");
@@ -15,7 +37,7 @@ public class App {
 		mumsCar.setColour("White");
 		mumsCar.setBoot(true);
 
-		mumsCar.printCar();
+//		mumsCar.printCar();
 
 		Boat dreamboat = new Boat();
 		dreamboat.setMake("Sunseeker");
@@ -23,14 +45,16 @@ public class App {
 		dreamboat.setColour("White");
 		dreamboat.setOnWater(true);
 
-		dreamboat.printBoat();
+//		dreamboat.printBoat();
 
 		Plane easyjet = new Plane();
 		easyjet.setMake("Boeing");
 		easyjet.setModel("747");
 		easyjet.setColour("Orange");
-		easyjet.setWingsSize("196ft");
+		easyjet.setWingsSize(196);
 
-		easyjet.printPlane();
+//		easyjet.printPlane();
+
+		dreamboat.toString();
 	}
 }
