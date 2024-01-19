@@ -9,8 +9,8 @@ public class Plane extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Plane [WingSize=" + WingSize + ", getWingSize()=" + getWingSize() + ", getMake()=" + getMake()
-				+ ", getModel()=" + getModel() + ", getColour()=" + getColour() + "]";
+		return "Plane [WingSize=" + WingSize + ", getMake()=" + getMake() + ", getModel()=" + getModel()
+				+ ", getColour()=" + getColour() + ", getId()=" + getId() + "]";
 	}
 
 	public Plane() {

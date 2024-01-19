@@ -10,14 +10,13 @@ public class Car extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Car [boot=" + boot + ", isBoot()=" + isBoot() + ", getMake()=" + getMake() + ", getModel()="
-				+ getModel() + ", getColour()=" + getColour() + "]";
+		return "Car [boot=" + boot + ", getMake()=" + getMake() + ", getModel()=" + getModel() + ", getColour()="
+				+ getColour() + ", getId()=" + getId() + "]";
 	}
 
 	public Car(String make, String model, String colour, boolean boot) {
 		super(make, model, colour);
 		this.boot = boot;
-
 	}
 
 	public Car() {

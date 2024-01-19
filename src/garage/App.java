@@ -5,22 +5,22 @@ public class App {
 	public static void main(String[] args) {
 
 		Car dreamcar = new Car("Audi", "R8", "black", true);
-//		dreamcar.print();
+		dreamcar.print();
 
 		Car brokencar = new Car();
-//		brokencar.print();
+		brokencar.print();
 
 		Boat bestboat = new Boat("Sunseeker", "24PX", "Silver", true);
-//		bestboat.print();
+		bestboat.print();
 
 		Boat brokenboat = new Boat();
-//		brokenboat.print();
+		brokenboat.print();
 
 		Plane bestplane = new Plane("Boeing", "787", "White", 200);
-//		bestplane.print();
+		bestplane.print();
 
 		Plane brokenplane = new Plane();
-//		brokenplane.print();
+		brokenplane.print();
 
 //		put into an array 
 
@@ -28,7 +28,7 @@ public class App {
 
 		for (Vehicle vehicle : vehicles) {
 
-//			vehicle.print();
+			vehicle.print();
 		}
 
 		Car mumsCar = new Car();

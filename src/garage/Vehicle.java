@@ -4,20 +4,19 @@ public abstract class Vehicle {
 
 	public abstract int calcBill();
 
-	@Override
-	public String toString() {
-		return "Vehicle [make=" + make + ", model=" + model + ", colour=" + colour + ", toString()=" + super.toString()
-				+ "]";
-	}
-
 	private String make;
 
 	private String model;
 
 	private String colour;
 
+	private int id;
+
+	private static int count = 1;
+
 	public Vehicle(String make, String model, String colour) {
 		super();
+		this.id = count++;
 		this.make = make;
 		this.model = model;
 		this.colour = colour;
@@ -31,6 +30,7 @@ public abstract class Vehicle {
 
 	public Vehicle() {
 		super();
+		this.id = count++;
 	}
 
 	public String getMake() {
@@ -55,6 +55,19 @@ public abstract class Vehicle {
 
 	public void setColour(String colour) {
 		this.colour = colour;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = count++;
+	}
+
+	@Override
+	public String toString() {
+		return "Vehicle [make=" + make + ", model=" + model + ", colour=" + colour + ", id=" + id + "]";
 	}
 
 }

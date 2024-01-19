@@ -10,8 +10,8 @@ public class Boat extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Boat [onWater=" + onWater + ", isOnWater()=" + isOnWater() + ", getMake()=" + getMake()
-				+ ", getModel()=" + getModel() + ", getColour()=" + getColour() + "]";
+		return "Boat [onWater=" + onWater + ", getMake()=" + getMake() + ", getModel()=" + getModel() + ", getColour()="
+				+ getColour() + ", getId()=" + getId() + "]";
 	}
 
 	public Boat() {
